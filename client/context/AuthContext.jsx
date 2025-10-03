@@ -39,7 +39,7 @@ export const AuthProvider=({children})=>{
             }
         })
         //this line is not needed as socket.io v4 automatically connects
-        newSocket.connect()
+        // newSocket.connect()
         setSocket(newSocket)
         newSocket.on("getOnlineUsers",(userIds)=>{
             setOnlineUsers(userIds)
