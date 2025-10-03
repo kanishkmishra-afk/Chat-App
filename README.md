@@ -2,14 +2,13 @@
 
 ## Project Summary
 
-This Chat App is a full-stack real-time messaging platform built with the MERN stack (MongoDB, Express, React, Node.js) and Socket.io for instant communication. It allows users to sign up, log in, create or join chat rooms, and exchange messages seamlessly with real-time updates. The app is designed to be responsive across devices and prioritizes a user-friendly experience for quick and easy conversations.
+This Chat App is a full-stack real-time messaging platform built with the MERN stack (MongoDB, Express, React, Node.js) and Socket.io for instant one-on-one communication. It allows users to sign up, log in, and chat directly with other users in private conversations with real-time updates. The app is designed to be responsive across devices and prioritizes a user-friendly experience for quick and easy conversations.
 
 ## Key Features
 
-- Real-time chat with instant message delivery using Socket.io
+- Real-time one-on-one chat with instant message delivery using Socket.io
 - Secure user authentication with JWT-based sessions
-- Multiple chat rooms with dynamic room creation
-- Online/offline user status visibility
+- See online/offline user status
 - Responsive UI optimized for desktops and mobile devices
 - Deployed on Vercel for easy access and scalability
 
@@ -29,6 +28,7 @@ This Chat App is a full-stack real-time messaging platform built with the MERN s
 ## Installation
 
 ### 1. Clone the repository:
+
 
 git clone https://github.com/kanishkmishra-afk/Chat-App.git
 
