@@ -15,7 +15,8 @@ export const signup=async(req,res)=>{
             return res.json({success:false, message:"missing details"})
         }
 
-        const user=User.findOne({email})
+        const user= await User.findOne({email})
+        
 
         if(user){
             return res.json({success:false, message:"account already exist"})
@@ -82,7 +83,7 @@ export const updateProfile=async(req, res)=>{
         if(!profilePic){
           updatedUser=await User.findByIdAndUpdate(userId,{bio, fullName},{new:true})  
         }else{
-            const uplaod=await cloudinary.uploader.uplaod(profilePic)
+            const uplaod=await cloudinary.uploader.upload(profilePic)
             updatedUser=await User.findByIdAndUpdate(userId,{profilePic:uplaod.secure_url, bio, fullName},{new:true})
         }
 

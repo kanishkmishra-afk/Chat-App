@@ -38,8 +38,8 @@ export const AuthProvider=({children})=>{
                 userId:userData._id
             }
         })
-
-        newSocket.connect()
+        //this line is not needed as socket.io v4 automatically connects
+        // newSocket.connect()
         setSocket(newSocket)
         newSocket.on("getOnlineUsers",(userIds)=>{
             setOnlineUsers(userIds)
@@ -49,8 +49,10 @@ export const AuthProvider=({children})=>{
 
     const login=async(state,credentials)=>{
         try {
+            console.log(state);
             const {data}= await axios.post(`/api/auth/${state}`,credentials)
             if(data.success){
+                
                 setAuthUser(data.userData)
                 connectSocket(data.userData)
                 axios.defaults.headers.common["token"]=data.token
