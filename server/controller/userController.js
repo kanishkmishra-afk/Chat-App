@@ -43,6 +43,7 @@ export const signup=async(req,res)=>{
 // controller to login user
 
 export const login=async(req,res)=>{
+    console.log("login controller");
     
     try {
         const {email,password}=req.body
@@ -59,7 +60,7 @@ export const login=async(req,res)=>{
         
     } catch (error) {
         console.log(error.message);
-        res.json({success:true,userData,token,message:error.message})
+        res.json({success:false,message:error.message})
         
     }
 }

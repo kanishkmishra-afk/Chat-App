@@ -39,7 +39,7 @@ export const AuthProvider=({children})=>{
             }
         })
         //this line is not needed as socket.io v4 automatically connects
-        // newSocket.connect()
+        newSocket.connect()
         setSocket(newSocket)
         newSocket.on("getOnlineUsers",(userIds)=>{
             setOnlineUsers(userIds)
@@ -49,7 +49,6 @@ export const AuthProvider=({children})=>{
 
     const login=async(state,credentials)=>{
         try {
-            console.log(state);
             const {data}= await axios.post(`/api/auth/${state}`,credentials)
             if(data.success){
                 
@@ -60,6 +59,7 @@ export const AuthProvider=({children})=>{
                 localStorage.setItem("token",data.token)
                 toast.success(data.message)
             }else{
+                console.log(state);
                 toast.error(data.message)
             }
         } catch (error) {
