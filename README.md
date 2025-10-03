@@ -28,39 +28,39 @@ This Chat App is a full-stack real-time messaging platform built with the MERN s
 
 ## Installation
 
-1. Clone the repository:
+### 1. Clone the repository:
 
 git clone https://github.com/kanishkmishra-afk/Chat-App.git
 
-2. Install backend dependencies:
+### 2. Install backend dependencies:
 
 cd backend
 npm install
 
 
-3. Create a `.env` file in the backend directory with:
+### 3. Create a `.env` file in the backend directory with:
 
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret
 
 
-4. Install frontend dependencies:
+### 4. Install frontend dependencies:
 
 cd ../frontend
 npm install
 
 
-5. Start the backend server:
+### 5. Start the backend server:
 
 npm start
 
 
-6. Start the frontend server:
+### 6. Start the frontend server:
 
 npm start
 
 
-7. Open `http://localhost:3000` in your browser.
+### 7. Open `http://localhost:3000` in your browser.
 
 
 ## Usage
