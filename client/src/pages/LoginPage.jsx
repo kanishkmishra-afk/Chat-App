@@ -4,10 +4,10 @@ import { AuthContext } from '../../context/AuthContext'
 
 const LoginPage = () => {
   const[currState,setCurrState]=useState("sign up")
-  const[fullName,setFullName]=useState(" ")
+  const[fullName,setFullName]=useState("")
   const[email,setEmail]=useState(" ")
-  const[password,setPassword]=useState(" ")
-  const[bio,setBio]=useState(" ")
+  const[password,setPassword]=useState("")
+  const[bio,setBio]=useState("")
   const[isDataSubmitted,setIsDataSubmitted]=useState(false)
 
   const {login}=useContext(AuthContext)
@@ -50,7 +50,7 @@ const LoginPage = () => {
 
           {
             currState==="sign up" && isDataSubmitted && (
-              <textarea onChange={(e)=>setBio(e.target.value)} value={bio} rows={4} placeholder='provide a short bio' className=''></textarea>
+              <textarea onChange={(e)=>setBio(e.target.value)} value={bio} rows={4} placeholder='provide a short bio...' className=''></textarea>
             )
           }
           <button type='submit' className='py-3 bg-gradient-to-r from-purple-400 to-violet-600 text-white rounded-md cursor-pointer'>
